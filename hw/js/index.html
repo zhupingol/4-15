@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商品信息</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!--bs3-pannel:danger-->
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">商品信息管理</h3>
+            </div>
+            <div class="panel-body">
+                <div class="list-group animated" id="editorContainer">
+                    <div>商品名称<input type="text" class="form-control" id="pName"></div>
+                    <div>分类<input type="text" class="form-control" id="pType"></div>
+                    <div> 链接<input type="text" class="form-control" id="pLink"></div>
+                    <div>图片<input type="text" class="form-control" id="pImg"></div>
+                    <div>价格<input type="text" class="form-control" id="pPrice"></div>
+                    <div><a onclick="doSub(event)" class="btn btn-danger btn-block">提交</a></div>
+                </div>
+                <div id="listContainer" class="animated">
+                    <a onclick="xinZeng(event)" href="javascript:void(0)" class="btn btn-info">新增</a>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>序号</th>
+                                <th>图片</th>
+                                <th>名字</th>
+                                <th>分类</th>
+                                <th>价格</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb">
+                            <tr>
+                                <!--<td></td>-->
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="api.js"></script>
+    <script src="index.js"></script>
+
+</body>
+
+</html>

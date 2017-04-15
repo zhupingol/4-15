@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户信息页面</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="animate.css">
+    <style>
+        .panel-body {
+            background-color: lavender;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">用户信息</h3>
+            </div>
+            <div class="panel-body">
+                <div id="editorContainer" class="animated">
+                    <!-- onfocus="fName(event)" onblur="bName(event)"-->
+                    <div id="d1">姓名<input type="text" class="form-control" id="pName" onfocus="fName(event)" onblur="bName(event)"><span id="s1"></span></div>
+                    <div id="d2"> 性别<input type="text" class="form-control" id="pGenger" onfocus="fGenger(event)" onblur="bGenger(event)"><span id="s2"></span></div>
+                    <div id="d3"> 年龄<input type="text" class="form-control" id="pAge" onfocus="fAge(event)" onblur="bAge(event)"><span id="s3"></span></div>
+                    <div id="d4"> 手机号<input type="text" class="form-control" id="pIphone" onfocus="fIphone(event)" onblur="bIphone(event)"><span id="s4"></span></div>
+                    <div id="d5">邮箱<input type="text" class="form-control" id="pImail" onfocus="fImail(event)" onblur="bImail(event)"><span id="s5"></span> </div>
+                    <div id="d6"> qq <input type="text" class="form-control" id="pQq" onfocus="fqq(event)" onblur="bqq(event)"><span id="s6"></span></div>
+                    <div id="d7"> 微信号<input type="text" class="form-control" id="pWeixin" onfocus="fWeixin(event)" onblur="bWeixin(event)"><span id="s7"></span></div>
+                    <div><a onclick="doSub(event)" class="btn btn-danger btn-block">提交</a></div>
+                </div>
+                <div id="listContainer" class="animated">
+                    <a onclick="xinZeng(event)" href="javascript:void(0)" class="btn btn-info">新增</a>
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>姓名</th>
+                                <th>性别</th>
+                                <th>年龄</th>
+                                <th>手机号</th>
+                                <th>邮箱</th>
+                                <th>qq</th>
+                                <th>微信号</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tb">
+                            <tr>
+                              
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="api.js"></script>
+    <script src="hu.js"></script>
+</body>
+
+</html>
